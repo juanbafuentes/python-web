@@ -1,9 +1,12 @@
 import reflex as rx
 import link_bio.constants as const
+from link_bio.components.newsletter import newsletter
+from link_bio.components.featured_link import featured_link
 from link_bio.routes import Route
 from link_bio.components.link_button import link_button
 from link_bio.components.title import title
-from link_bio.styles.styles import Size
+from link_bio.styles.styles import Color, Spacing
+from link_bio.state.PageState import PageState
 
 
 def index_links() -> rx.Component:
@@ -15,7 +18,7 @@ def index_links() -> rx.Component:
             "/icons/code.svg",
             Route.COURSES.value,
             False,
-            True
+            Color.SECONDARY.value
         ),
         link_button(
             "Twitch",
@@ -36,10 +39,26 @@ def index_links() -> rx.Component:
             const.YOUTUBE_URL
         ),
         link_button(
-            "YouTube [canal secundario]",
+            "YouTube | canal secundario",
             "Emisiones en directo destacadas",
             "/icons/youtube.svg",
             const.YOUTUBE_SECONDARY_URL
+        ),
+
+        rx.cond(
+            PageState.featured_info,
+            rx.vstack(
+                title("Destacado"),
+                rx.flex(
+                    rx.foreach(
+                        PageState.featured_info,
+                        featured_link
+                    ),
+                    flex_direction=["column", "row"],
+                    spacing=Spacing.DEFAULT.value
+                ),
+                spacing=Spacing.DEFAULT.value
+            )
         ),
 
         title("Recursos y más"),
@@ -87,6 +106,10 @@ def index_links() -> rx.Component:
             "/icons/email.svg",
             f"mailto:{const.EMAIL}"
         ),
+
+        title("Newsletter"),
+        newsletter(),
         width="100%",
-        spacing=Size.DEFAULT.value,
+        spacing=Spacing.DEFAULT.value,
+        on_mount=PageState.featured_links
     )

@@ -1,12 +1,26 @@
 # Web de links de MoureDev
 
 [![Python](https://img.shields.io/badge/Python-3.11+-yellow?style=for-the-badge&logo=python&logoColor=white&labelColor=101010)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/Reflex-0.3.9+-5646ED?style=for-the-badge&logo=reflex&logoColor=white&labelColor=101010)](https://fastapi.tiangolo.com)
+[![FastAPI](https://img.shields.io/badge/Reflex-0.4.5+-5646ED?style=for-the-badge&logo=reflex&logoColor=white&labelColor=101010)](https://fastapi.tiangolo.com)
 
 ## Proyecto desarrollado con [Python](https://www.python.org/) y [Reflex](https://reflex.dev/) que representa un sitio web personal estilo "[link in bio](https://moure.dev/)"
 
 ![https://moure.dev](../Images/web.png)
 ![https://moure.dev](../Images/web.gif)
+
+## Sobre el curso: muy importante
+
+Desde la versión 0.4.0, Reflex utiliza [Radix](https://www.radix-ui.com/) (en vez de [Chakra](https://chakra-ui.com/)) como sistema de componentes de UI. Ten en cuenta la versión que usas del framework, ya que algunos elementos han podido cambiar ligeramente. Te recomiendo que revises el [código](./link_bio) del proyecto original actualizado. A partir de la versión 0.4.0, todos los componentes de Chakra estarán en `rx.chakra`.
+
+Ejemplo:
+
+```
+import reflex as rx
+rx.button() # Ahora este será el botón de Radix
+rx.chakra.button() # Anterior botón de Chakra
+```
+
+Aquí tienes [un artículo](https://reflex.dev/blog/2024-02-16-reflex-v0.4.0) con toda la información sobre la nueva versión.
 
 ## Tutorial
 

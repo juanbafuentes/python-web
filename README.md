@@ -1,7 +1,7 @@
 # Python Web
 
 [![Python](https://img.shields.io/badge/Python-3.11+-yellow?style=for-the-badge&logo=python&logoColor=white&labelColor=101010)](https://python.org)
-[![Reflex](https://img.shields.io/badge/Reflex-0.3.9+-5646ED?style=for-the-badge&logo=reflex&logoColor=white&labelColor=101010)](https://reflex.dev)
+[![Reflex](https://img.shields.io/badge/Reflex-0.4.5+-5646ED?style=for-the-badge&logo=reflex&logoColor=white&labelColor=101010)](https://reflex.dev)
 
 ## Curso de 6 horas en vídeo para aprender desarrollo web frontend con Python puro y Reflex desde cero.
 
@@ -12,17 +12,33 @@
 
 ## ⚠️ [NUEVO] Curso de Python Web Avanzado
 
-### 🗓️ Próxima clase: 01/02/24 a las 20h (España) en directo desde [Twitch](https://twitch.tv/mouredev)
-[**Consulta aquí el horario en tu país y crea un recordatorio**](https://discord.gg/mouredev?event=1200405460059172864)
-
-### Clases anteriores:
+Curso finalizado. En las próximas semanas se subirá editado a YouTube. Por el momento, aquí tienes las clases en Twitch.
 
 - [Clase 1 [18/01/24]: Actualización, refactor, Router, componentes React y hosting Reflex](https://www.twitch.tv/videos/2036419660?t=00h14m41s)
 - [Clase 2 [25/01/24]: Backend, Docker, CORS y GitHub Actions](https://www.twitch.tv/videos/2043357705?t=00h17m22s)
+- [Clase 3 [01/02/24]: Estados, API REST e integración API Twitch](https://www.twitch.tv/videos/2050175668?t=00h16m05s)
+- [Clase 4 [08/02/24]: Integración Supabase PostgreSQL](https://www.twitch.tv/videos/2057000877?t=00h16m10s)
+- [Clase 5 [16/02/24]: Variables custom](https://www.twitch.tv/videos/2063647841?t=00h12m08s)
+- [Clase 6 [23/02/24]: Feature flags y migración a Radix UI](https://www.twitch.tv/videos/2070550680?t=00h17m52s)
+- [Clase 7 [07/03/24]: Cliente/servidor, animaciones y otras características](https://www.twitch.tv/videos/2083987765?t=00h15m09s)
 
 Continuación del curso desde cero de 6 horas. En esta sección más avanzada se aprenderán diferentes conceptos relacionados con el desarrollo web con Python y Reflex: Router, backend, APIs, eventos, estados, base de datos, Docker, y más...
 
 *Una vez se finalice el curso se creará un vídeo en YouTube, al igual que con la primera parte. Mientras tanto, los vídeos se guardan en Twitch durante 2 meses.*
+
+## Sobre el curso: muy importante
+
+Desde la versión 0.4.0, Reflex utiliza [Radix](https://www.radix-ui.com/) (en vez de [Chakra](https://chakra-ui.com/)) como sistema de componentes de UI. Ten en cuenta la versión que usas del framework, ya que algunos elementos han podido cambiar ligeramente. Te recomiendo que revises el [código](./link_bio) del proyecto original actualizado. A partir de la versión 0.4.0, todos los componentes de Chakra estarán en `rx.chakra`.
+
+Ejemplo:
+
+```
+import reflex as rx
+rx.button() # Ahora este será el botón de Radix
+rx.chakra.button() # Anterior botón de Chakra
+```
+
+Aquí tienes [un artículo](https://reflex.dev/blog/2024-02-16-reflex-v0.4.0) con toda la información sobre la nueva versión.
 
 ## Curso de Python Web: Tutorial en vídeo
 
@@ -89,6 +105,10 @@ Todo el contenido se crea en directo desde [Twitch](https://www.twitch.tv/moured
 * [Vercel](https://vercel.com/)
 * [Radix UI](https://www.radix-ui.com/)
 * [Ant Design](https://ant.design/)
+* [Railway](https://railway.app/)
+* [Twitch API](https://dev.twitch.tv/docs/api/)
+* [Supabase](https://supabase.com/)
+* [ConfigCat](https://configcat.com/)
 
 ## Curso de Python desde cero
 ### Aprende Python desde sus fundamentos

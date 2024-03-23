@@ -3,11 +3,7 @@ import link_bio.constants as const
 import link_bio.styles.styles as styles
 from link_bio.pages.index import index
 from link_bio.pages.courses import courses
-
-
-class State(rx.State):
-    """Define your app state here."""
-
+from link_bio.api.api import repo, live, featured, schedule
 
 app = rx.App(
     stylesheets=styles.STYLESHEETS,
@@ -25,3 +21,8 @@ gtag('config', '{const.G_TAG}');
         ),
     ],
 )
+
+app.api.add_api_route("/repo", repo)
+app.api.add_api_route("/live/{user}", live)
+app.api.add_api_route("/featured", featured)
+app.api.add_api_route("/schedule", schedule)
